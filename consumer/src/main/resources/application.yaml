@@ -1,0 +1,18 @@
+server:
+  port: 8092
+
+dubbo:
+  application:
+    # 当前服务/应用的名字
+    name: dubbo-consumer
+  registry:
+    # 注册中心的协议和地址
+    address: zookeeper://192.168.174.130:2181
+    # 使用curator客户端
+    client: curator
+    # 通信规则（通信协议和接口）
+  protocol:
+    name: dubbo
+    port: -1
+  scan:
+    base-packages: com.lichfeng.dubbostudy.service

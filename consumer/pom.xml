@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lichfeng.dubbostudy</groupId>
+        <artifactId>dubbostudy</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>consumer</artifactId>
+    <packaging>war</packaging>
+    <name>consumer Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <!--导入公共模块依赖-->
+        <dependency>
+            <groupId>com.lichfeng.dubbostudy</groupId>
+            <artifactId>api</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- dubbo-spring-boot依赖 -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <!--zookeeper客户端，包含curator-framework、curator-recipes这两个依赖-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery</artifactId>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <finalName>consumer</finalName>
+    </build>
+</project>
